@@ -48,6 +48,24 @@ int case_s(char *f)
 	return (_strlen(f));
 }
 /**
+* case_b - Print the string format
+*@f : String coming
+*Return: the number of elements printed
+*/
+int case_b(long int p)
+{
+	char *g = "0";
+	int num;
+
+	num = dec_to_bin(p);
+	if (num == 0)
+	{
+		write(1, g, 1);
+		return (1);
+	}
+	return (num);
+}
+/**
 *switche_int - Switch of all the format numbers
 *@c : A char
 *@args : the int arguments
@@ -70,6 +88,9 @@ int switche_int(char c, int args)
 		x = args;
 		write(1, &x, 1);
 		return (1);
+	case 'b':
+		p = args;
+		return (case_b(p));
 	default:
 		exit(2);
 	}

@@ -54,7 +54,7 @@ int plus(const char *format, int i)
 	}
 	if (format[i] == 37 && format[i - 1] != 37 && (format[i + 1] != 37 ||
 		format[i + 1] != '\0' || format[i + 1] != 'c' || format[i + 1] != 'c' ||
-		format[i + 1] != 'd' || format[i + 1] != 'i'))
+		format[i + 1] != 'd' || format[i + 1] != 'i' || format[i + 1] != 'b'))
 	{
 		write(1, &format[i], 1);
 		return (1);
@@ -78,13 +78,13 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i]; i++)
 	{ i = escape(format, i);
 		if (((format[i] == 37) && (format[i + 1] == 'd' || format[i + 1] == 'i' ||
-					format[i + 1] == 'c' || format[i + 1] == 's')))
+					   format[i + 1] == 'c' || format[i + 1] == 's' || format[i + 1] == 'b')))
 		{
 			if (format[i + 1] == 's')
 				s += switche_string(format[i + 1], va_arg(args, char *));
 			else
 			{ cont = va_arg(args, int);
-				if (format[i + 1] == 'd' || format[i + 1] == 'i')
+				if (format[i + 1] == 'd' || format[i + 1] == 'i' || format[i + 1] == 'b')
 				{
 					if (cont == 0)
 					{ write(1, &f, 1);
