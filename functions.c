@@ -49,8 +49,8 @@ int case_s(char *f)
 }
 /**
 * case_b - Print the string format
-*@f : String coming
-*Return: the number of elements printed
+* @p : String coming
+* Return: the number of elements printed
 */
 int case_b(long int p)
 {
