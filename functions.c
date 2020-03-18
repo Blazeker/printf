@@ -110,6 +110,9 @@ int switche_string(char c, char *args)
 	case 's':
 		f = args;
 		return (case_s(f));
+	case 'r':
+		f = args;
+		return (case_r(f));
 	default:
 		exit(2);
 	}
