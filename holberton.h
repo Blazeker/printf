@@ -14,5 +14,6 @@ int escape(const char *format, int i);
 int is_neg(long int num);
 int dec_to_bin(long int n);
 int case_b(long int p);
+int case_r(char *f);
 
 #endif

@@ -5,7 +5,24 @@
 #include <string.h>
 #include <limits.h>
 #include "holberton.h"
+/**
+* case_r - Print the string format
+*@f : String coming
+*Return: the number of elements printed
+*/
+int case_r(char *f)
+{
+	char *g = "(null)";
 
+	if (f == 0)
+	{
+		write(1, g, 6);
+		return (6);
+	}
+	rev_string(f);
+	write(1, f, _strlen(f));
+	return (_strlen(f));
+}
 /**
  * _strlen - A function to count the lenght of an array
  * @s : array
