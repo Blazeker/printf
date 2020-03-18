@@ -12,8 +12,14 @@ The way to do that is "walking" on that string position by position and when on 
 Some examples are:
 
 _printf("%") - That prints nothing and return a -1
+
 _printf("%d", 1) - That prints the number 1
+
 _printf("%d%s", 1, " hola") - That prints the number 1 followed by hola like this "1 hola"
+
 _printf("%%%d%c", 1, 'p') - Prints % followed by 1 and p like this "%1p"
+
 _printf("\\%%%i%s%d", 1, "Holberton", 2) - Prints "\%1Holberton2" 
+
+
 By Norman Isaza and Santiago Arboleda
